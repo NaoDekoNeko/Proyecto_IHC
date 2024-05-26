@@ -1,5 +1,9 @@
 <template>
   <div class="login-container">
+    <header>
+      <button @click="goBack" class="back-button">⬅️</button>
+      <h1>Autenticación</h1>
+    </header>
     <div class="login-content">
       <div class="auth-section">
         <h2>Autenticación de usuario</h2>
@@ -40,6 +44,8 @@ export default {
     authenticate() {
       // Lógica de autenticación
       console.log('Autenticando con email:', this.email);
+      // Simula autenticación exitosa
+      this.$router.push({ name: 'Courses' });
     },
     goToSignup() {
       this.$router.push({ name: 'Signup' });
@@ -53,10 +59,37 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: #e0f7fa;
+}
+
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  background: #42b983;
+  color: white;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
 }
 
 .login-content {
@@ -64,7 +97,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  margin-top: 20px;
+  margin-top: 80px; /* Ajusta esto según la altura del header */
 }
 
 .auth-section, .help-section {
@@ -114,17 +147,6 @@ export default {
 
 .signup-button {
   background-color: #42b983;
-}
-
-.terms {
-  font-size: 12px;
-  color: #666;
-  text-align: center;
-}
-
-.terms a {
-  color: #000;
-  text-decoration: none;
 }
 
 .help-section {

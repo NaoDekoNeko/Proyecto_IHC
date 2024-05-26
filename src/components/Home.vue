@@ -58,16 +58,6 @@ h1 {
   gap: 20px;
 }
 
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  background-color: #000;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-}
-
 button:hover {
   background-color: #333;
 }
