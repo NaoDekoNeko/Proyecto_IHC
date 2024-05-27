@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <button @click="goBack" class="back-button">⬅️</button>
+      <button @click="goBack" class="image-10"></button>
       <h1>Educational Virtual Assistant</h1>
     </header>
     <main>
@@ -43,19 +43,20 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 30px; 
 }
 
 header h1 {
   margin: 0;
 }
 
-header .back-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-  margin-right: 10px;
+header .image-10 {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: url('assets/images/image_10.png') 50% / cover no-repeat;
+  margin-bottom: 69.5px;
+  align-self: flex-start;
+  width: 30px; /* Cambiado de 50px a 100px */
+  height: 30px; /* Cambiado de 50px a 100px */
 }
 
 main {
@@ -68,7 +69,9 @@ main {
 footer {
   background: #42b983;
   color: white;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
+  
+  
 }
 </style>

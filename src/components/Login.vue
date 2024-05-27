@@ -56,7 +56,7 @@ export default {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: #e0f7fa;
+  background-color: #D6FFFF;
 }
 
 .login-content {
