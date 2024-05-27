@@ -10,6 +10,9 @@
       <button @click="goToLogin">Iniciar Sesión</button>
       <button @click="goToSignup">Crear cuenta</button>
     </div>
+    <div class="aboutus-container">
+      <button @click="goToAboutUs">Sobre Nosotros</button>
+    </div>
   </div>
 </template>
 
@@ -22,6 +25,9 @@ export default {
     },
     goToSignup() {
       this.$router.push({ name: 'Signup' });
+    },
+    goToAboutUs() {
+      this.$router.push({ name: 'AboutUs' });
     }
   }
 }
@@ -58,6 +64,14 @@ h1 {
   gap: 20px;
 }
 
+.aboutus-container {
+  position: relative;
+  right: 50rem;
+  top: 12rem;
+  font-size: 1.5rem;
+  
+}
+
 button {
   padding: 10px 20px;
   border: none;
@@ -72,3 +86,5 @@ button:hover {
   background-color: #333;
 }
 </style>
+
+
